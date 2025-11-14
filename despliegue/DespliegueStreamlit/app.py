@@ -21,9 +21,13 @@ import matplotlib.pyplot as plt #gráfica
 
 #cargamos el pipeline
 import pickle
-filename = 'pipeline_modelo.pkl'
-pipeline = pickle.load(open(filename, 'rb'))
-pipeline
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+filename = os.path.join(BASE_DIR, "pipeline_modelo.pkl")
+
+with open(filename, "rb") as f:
+    pipeline = pickle.load(f)
 
 #Cargamos los datos futuros
 #data = pd.read_excel("Diabetes-datosFuturos.xlsx")
