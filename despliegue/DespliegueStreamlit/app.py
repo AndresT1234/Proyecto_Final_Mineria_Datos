@@ -32,7 +32,6 @@ pipeline
 #Se crea interfaz gráfica con streamlit para captura de los datos
 #Interfaz gráfica
 import streamlit as st
-import pandas as pd
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.pagesizes import letter
